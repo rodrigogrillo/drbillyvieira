@@ -1,25 +1,28 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
-navToggle.addEventListener('click', () => {
-  const open = mainNav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', open);
-});
-mainNav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mainNav.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
   });
-});
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
 
 // Sombra no header ao rolar
 const header = document.querySelector('.site-header');
 const floatWa = document.getElementById('floatWa');
 window.addEventListener('scroll', () => {
   const scrolled = window.scrollY > 12;
-  header.classList.toggle('scrolled', scrolled);
-  floatWa.classList.toggle('visible', window.scrollY > 400);
+  if (header) header.classList.toggle('scrolled', scrolled);
+  if (floatWa) floatWa.classList.toggle('visible', window.scrollY > 400);
 });
 
 // Animações de revelação ao rolar (só desloca a posição, nunca esconde o
