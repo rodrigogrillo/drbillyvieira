@@ -51,7 +51,7 @@
         <p class="hero-signature">Dr. Billy Vieira · CRO-SP 168491</p>
       </div>
       <div class="hero-figure">
-        <img src="assets/perfil.jpg" alt="Dr. Billy Vieira, cirurgião-dentista" class="hero-photo">
+        <img src="assets/perfil.png" alt="Dr. Billy Vieira, cirurgião-dentista" class="hero-photo">
       </div>
     </div>
     <svg class="smile-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
@@ -154,8 +154,25 @@
     <div class="wrap">
       <p class="eyebrow">Resultados</p>
       <h2>Transformações reais</h2>
-      <div class="resultado-frame reveal">
-        <img src="assets/antes-depois.jpg" alt="Antes e depois de tratamento odontológico realizado pelo Dr. Billy Vieira" loading="lazy">
+      <div class="carousel reveal" id="resultsCarousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="assets/antes-depois.jpg" alt="Antes e depois de tratamento odontológico realizado pelo Dr. Billy Vieira" loading="lazy">
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/antes-depois-botox.jpg" alt="Antes e depois de aplicação de botox realizada pelo Dr. Billy Vieira" loading="lazy">
+          </div>
+        </div>
+        <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" aria-label="Resultado anterior">
+          <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="carousel-arrow carousel-arrow--next" id="carouselNext" aria-label="Próximo resultado">
+          <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="carousel-dots" id="carouselDots">
+          <button class="carousel-dot is-active" aria-label="Ver resultado 1"></button>
+          <button class="carousel-dot" aria-label="Ver resultado 2"></button>
+        </div>
       </div>
     </div>
   </section>
