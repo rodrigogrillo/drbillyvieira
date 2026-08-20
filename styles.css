@@ -473,4 +473,20 @@ p { margin: 0 0 1em; color: var(--ink-soft); line-height: 1.65; }
   .city-card { text-align: left; }
   .purpose { flex-direction: column; align-items: flex-start; }
   .purpose .btn { width: 100%; justify-content: center; }
+
+  /* Hero mais compacto no mobile, pra caber foto + título numa tela só */
+  .hero { padding-top: 28px; }
+  .hero-inner { padding-bottom: 24px; }
+  .hero-figure { max-width: 168px; margin-bottom: 14px; }
+  .hero-credential-card { bottom: -16px; padding: 8px 10px; max-width: 92%; }
+  .hero-credential-card strong { font-size: .74rem; white-space: nowrap; }
+  .hero-credential-icon { width: 22px; height: 22px; }
+  .hero-credential-icon svg { width: 12px; height: 12px; }
+  .hero-credential-card strong { font-size: .76rem; }
+  .hero-credential-card span { font-size: .64rem; }
+  .eyebrow { margin-bottom: .5em; }
+  .location-badge { margin-bottom: 10px; }
+  .hero h1 { font-size: 1.6rem; margin-top: .15em; }
+  .hero-rule { margin: 12px 0; }
+  .hero-lede { font-size: .92rem; }
 }
