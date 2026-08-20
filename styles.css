@@ -254,9 +254,12 @@ p { margin: 0 0 1em; color: var(--ink-soft); line-height: 1.65; }
 .treatment-card--photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 .treatment-card--photo div {
   position: relative; z-index: 1; padding: 20px;
-  background: linear-gradient(to top, rgba(20,32,26,.9) 20%, rgba(20,32,26,.1) 70%, transparent 100%);
+  min-height: 62%;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  background: linear-gradient(to top, rgba(10,18,14,.96) 0%, rgba(10,18,14,.82) 35%, rgba(10,18,14,.35) 70%, transparent 100%);
   width: 100%;
 }
+.treatment-card--photo h3, .treatment-card--photo p { text-shadow: 0 1px 4px rgba(0,0,0,.45); }
 
 /* Onde atendo */
 .location-top { margin-bottom: 44px; }
