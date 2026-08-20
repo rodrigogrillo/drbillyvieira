@@ -20,6 +20,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 76px; }
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -193,7 +194,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); line-height: 1.65; }
 .resultado-frame { margin-top: 32px; border-radius: 18px; overflow: hidden; max-width: 900px; box-shadow: 0 24px 50px -28px rgba(20,32,26,.25); }
 
 /* Carrossel de resultados */
-.carousel { position: relative; margin-top: 32px; max-width: 900px; }
+.carousel { position: relative; margin: 32px auto 0; max-width: 900px; }
 .carousel-track {
   display: flex;
   overflow-x: auto;
@@ -326,7 +327,20 @@ p { margin: 0 0 1em; color: var(--ink-soft); line-height: 1.65; }
 .contato-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
 .contato-actions .btn-ghost { border-color: rgba(255,255,255,.35); color: var(--white); }
 .contato-actions .btn-ghost:hover { border-color: var(--gold); color: var(--gold-soft); }
-.contato-illustration { width: 100%; max-width: 320px; margin: 0 auto; }
+.contato-form {
+  background: var(--white); border-radius: 18px; padding: 30px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.contato-form label { font-size: .82rem; font-weight: 700; color: var(--ink); margin-top: 10px; }
+.contato-form input, .contato-form textarea {
+  font-family: var(--font-body); font-size: .95rem; padding: 12px 14px;
+  border-radius: 10px; border: 1.5px solid var(--line); background: var(--porcelain);
+  color: var(--ink); resize: vertical;
+}
+.contato-form input:focus, .contato-form textarea:focus { border-color: var(--forest); background: var(--white); outline: none; }
+.contato-form button { margin-top: 16px; justify-content: center; }
+.form-note { font-size: .85rem; text-align: center; min-height: 1.2em; margin: 10px 0 0; color: var(--ink-soft); }
+.form-note.success { color: var(--forest); font-weight: 700; }
 
 /* ============ FOOTER ============ */
 .site-footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,.1); padding: 28px 0; }
@@ -418,6 +432,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); line-height: 1.65; }
   .contato-illustration { max-width: 220px; margin: 32px 0 0; }
   .hero-inner { grid-template-columns: 1fr; padding-bottom: 40px; }
   .hero-figure { order: -1; max-width: 260px; margin-bottom: 50px; }
+  .hero-copy { text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .hero-copy .hero-lede { text-align: center; }
+  .hero-copy .hero-actions { justify-content: center; }
   .hero-features-wrap { margin-top: -50px; }
   .feature-strip { grid-template-columns: 1fr 1fr; }
   .feature-item { border-bottom: 1px solid var(--line); }

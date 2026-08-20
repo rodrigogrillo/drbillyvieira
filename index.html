@@ -51,10 +51,6 @@
         <p class="hero-lede">Atendimento humanizado, tecnologia e excelência para <strong>você sorrir</strong> com confiança.</p>
       </div>
       <div class="hero-figure">
-        <svg class="hero-watermark" viewBox="0 0 200 200" aria-hidden="true">
-          <circle cx="100" cy="100" r="78" fill="none" stroke="var(--forest)" stroke-width="7" opacity=".5" transform="rotate(90 100 100)" stroke-dasharray="240 500"/>
-          <path d="M60 100c8-24 20-36 40-36s32 12 40 36" fill="none" stroke="var(--forest)" stroke-width="7" opacity=".5" stroke-linecap="round"/>
-        </svg>
         <img src="assets/perfil.png" alt="Dr. Billy Vieira, cirurgião-dentista" class="hero-photo">
         <div class="hero-credential-card">
           <span class="hero-credential-icon">
@@ -347,12 +343,16 @@
           </a>
         </div>
       </div>
-      <svg class="contato-illustration" viewBox="0 0 220 200" aria-hidden="true">
-        <path d="M20 30h120a10 10 0 0110 10v60a10 10 0 01-10 10H90l-25 25v-25H20a10 10 0 01-10-10V40a10 10 0 0110-10z" fill="none" stroke="var(--gold-soft)" stroke-width="2" opacity=".5"/>
-        <path d="M90 60h100a10 10 0 0110 10v50a10 10 0 01-10 10h-10v20l-22-20h-68a10 10 0 01-10-10V70a10 10 0 0110-10z" fill="none" stroke="var(--gold-soft)" stroke-width="2" opacity=".8"/>
-        <path d="M128 78c-4-12-10-18-20-18s-16 6-20 18" fill="none" stroke="var(--gold-soft)" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M108 78c-2 8 0 14 0 20" fill="none" stroke="var(--gold-soft)" stroke-width="2.4" stroke-linecap="round"/>
-      </svg>
+      <form class="contato-form" id="contatoForm">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required placeholder="voce@email.com">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Como posso ajudar?"></textarea>
+        <button type="submit" class="btn btn-whatsapp">Enviar mensagem</button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
     </div>
   </section>
 

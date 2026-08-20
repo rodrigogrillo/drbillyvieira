@@ -84,3 +84,27 @@ if ('IntersectionObserver' in window) {
 
   updateUI();
 })();
+
+// Formulário de contato — abre o app de e-mail do visitante já preenchido,
+// endereçado para o Dr. Billy. Não precisa de servidor/backend.
+(function () {
+  const form = document.getElementById('contatoForm');
+  const note = document.getElementById('formNote');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nome = form.nome.value.trim();
+    const email = form.email.value.trim();
+    const mensagem = form.mensagem.value.trim();
+
+    const assunto = encodeURIComponent(`Contato pelo site — ${nome}`);
+    const corpo = encodeURIComponent(
+      `Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${mensagem}`
+    );
+    window.location.href = `mailto:billyvieira@gmail.com?subject=${assunto}&body=${corpo}`;
+
+    note.textContent = 'Abrindo seu aplicativo de e-mail para enviar a mensagem...';
+    note.classList.add('success');
+  });
+})();
