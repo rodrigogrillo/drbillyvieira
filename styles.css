@@ -309,12 +309,8 @@ p { margin: 0 0 1em; color: var(--ink-soft); line-height: 1.65; }
   margin: 36px 0 16px;
 }
 .convenios-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-.convenios-grid--placeholder { grid-template-columns: 1fr; }
-.convenios-empty {
-  border: 1.5px dashed var(--line); border-radius: 14px; padding: 28px;
-  text-align: center; color: var(--ink-soft); font-size: .92rem; margin: 0;
-  background: var(--white);
-}
+.convenios-grid--six { grid-template-columns: repeat(3, 1fr); }
+
 .convenio-card {
   border: 1.5px solid var(--line);
   border-radius: 14px; padding: 20px;
